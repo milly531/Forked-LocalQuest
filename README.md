@@ -19,4 +19,4 @@ You should just be able to build and run [|=3]
 ehhh idk what im doing with this lmao, i kinda saw this on discord
 and decided "Im gonna fork it and make modifications"
 
-## Kendrick Lamar is a GOAT
+## Kendrick Lamar is a GOAT 
