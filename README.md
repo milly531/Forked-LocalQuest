@@ -1,3 +1,4 @@
+## Gabe's Writing:
 ![Image](https://raw.githubusercontent.com/Epic-Quest/LocalQuest-Data/refs/heads/main/Images/BannerImg.png)
 # LocalQuest - A Localhost Rec Room custom server 🙀
 ## What's localquest?
@@ -14,3 +15,6 @@ You should just be able to build and run [|=3]
   - Change the BaseURL in NetworkFiles.cs to the raw files for your repo
   - Start the server with --URL https://raw.githubusercontent.com/{YOUR-REPO}
 - (When modifying LocalQuest-Data, skip over rooms 100-200 since they're reserved for RROs)
+## RitzDx's Writings:
+ehhh idk what im doing with this lmao, i kinda saw this on discord
+and decided "Im gonna fork it,a̶n̶d̶ s̶k̶i̶d̶ i̶t̶ f̶o̶r̶ m̶y̶ o̶w̶n̶ o̶l̶d̶ r̶r̶ s̶e̶r̶v̶e̶r̶"
