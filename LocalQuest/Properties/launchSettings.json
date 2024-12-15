@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "LocalQuest": {
+      "commandName": "Project",
+      "commandLineArgs": "--FromLauncher"
+    }
+  }
+}

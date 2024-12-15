@@ -22,6 +22,8 @@ namespace LocalQuest
             // hide the cursor for fancy ui 🙀
             Console.CursorVisible = false;
 
+            bool FromLauncher = false;
+
             for(int i = 0; i < args.Length; i++)
             {
                 if (args[i] == "--URL")
@@ -34,6 +36,10 @@ namespace LocalQuest
                     {
                         Log.Warn("Url change requested but not provided");
                     }
+                }
+                if(args[i] == "--FromLauncher")
+                {
+                    FromLauncher = true;
                 }
             }
 
@@ -133,6 +139,11 @@ namespace LocalQuest
             // add join the discord option
             Options.Add("Join the discord");
 
+            if(FromLauncher)
+            {
+                Options.Add("Go back to the launcher 😶‍🌫️");
+            }
+
             // get user selection
             string Selection = UiTools.WriteControls(Options);
 
@@ -163,6 +174,9 @@ namespace LocalQuest
                     // go to what's new but SILLY
                     WhatNew();
                     return;
+
+                case "Go back to the launcher 😶‍🌫️":
+                    break;
 
                 case "Join the discord":
                     // start process for opening discord
