@@ -508,6 +508,17 @@ namespace LocalQuest
                 case "Update data":
                     // download avatar items
                     List<AvatarItem> NewItems = AvatarManager.DownloadAvatarItems().Result;
+                    if (AvatarManager.AvatarItems != null && NewItems.Count < AvatarManager.AvatarItems.Count)
+                    {
+                        Console.WriteLine("AAAAAAAAAAAAAAAAAAAAAAHHH");
+                        Thread.Sleep(150);
+                        Console.WriteLine("OWWWWWW");
+                        Thread.Sleep(150);
+                        Console.WriteLine("IT'S SO PAINFULL");
+                        Thread.Sleep(150);
+                        Console.WriteLine("HELPPPPPPPPP");
+                        Thread.Sleep(750);
+                    }
                     // save updated avatar items
                     FileManager.WriteJSON("Avatar/AvatarItems", NewItems);
                     // go back to save settings
