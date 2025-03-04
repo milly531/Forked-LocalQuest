@@ -34,7 +34,7 @@ namespace LocalQuest.Models.Late2018
     public class BoardAnnouncement
     {
         public string Message { get; set; } = "Hello EpicQuesters?!";
-        public string MoreInfoUrl { get; set; } = "http://discord.gg/EpicQuest";
+        public string MoreInfoUrl { get; set; } = "https://discord.gg/CnzM6PXYsn";
     }
 
     public class FeaturedPlayer
