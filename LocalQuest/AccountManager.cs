@@ -26,7 +26,8 @@ namespace LocalQuest
             "Crazy",
             "Wacky",
             "Wonky",
-            "Funny"
+            "Funny",
+            "Wild"
         };
 
         static List<string> Animals = new List<string>()
