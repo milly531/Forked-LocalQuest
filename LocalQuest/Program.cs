@@ -138,6 +138,7 @@ namespace LocalQuest
 
             // add join the discord option
             Options.Add("Join the discord");
+            Options.Add("Give feedback");
 
             if(FromLauncher)
             {
@@ -176,6 +177,16 @@ namespace LocalQuest
                     return;
 
                 case "Go back to the launcher 😶‍🌫️":
+                    break;
+
+                case "Give feedback":
+                    // start process for opening discord
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                    {
+                        FileName = "https://forms.gle/Kz6Z9GbPrg4M6CMt5",
+                        UseShellExecute = true
+                    });
+                    Main(new string[0]);
                     break;
 
                 case "Join the discord":
