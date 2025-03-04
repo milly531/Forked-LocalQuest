@@ -182,7 +182,7 @@ namespace LocalQuest
                     // start process for opening discord
                     System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
                     { 
-                        FileName = "https://discord.gg/epicquest",
+                        FileName = "https://discord.gg/CnzM6PXYsn",
                         UseShellExecute = true
                     });
                     Main(new string[0]);

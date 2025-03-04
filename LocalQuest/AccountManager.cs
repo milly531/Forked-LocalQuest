@@ -24,6 +24,9 @@ namespace LocalQuest
             "Goofy",
             "Happy",
             "Crazy",
+            "Wacky",
+            "Wonky",
+            "Funny"
         };
 
         static List<string> Animals = new List<string>()
@@ -34,6 +37,9 @@ namespace LocalQuest
             "Bat",
             "Wolf",
             "Possum",
+            "Raccoon",
+            "Dog",
+            "Puppy"
         };
 
         public static string CreateName()
