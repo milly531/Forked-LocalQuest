@@ -23,7 +23,15 @@ namespace LocalQuest
             "bitch",
             "cock",
             "dick",
-            "piss"
+            "piss",
+            "nigga",
+            "wog",
+            "shit",
+            "phagit",
+            "bastard",
+            "pussy",
+            "hoe",
+            "tits"
         };
         public static bool IsPure(string? Content)
         {

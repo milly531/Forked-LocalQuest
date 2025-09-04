@@ -22,6 +22,8 @@ namespace LocalQuest
             // hide the cursor for fancy ui 🙀
             Console.CursorVisible = false;
 
+            bool FromLauncher = false;
+
             for(int i = 0; i < args.Length; i++)
             {
                 if (args[i] == "--URL")
@@ -34,6 +36,10 @@ namespace LocalQuest
                     {
                         Log.Warn("Url change requested but not provided");
                     }
+                }
+                if(args[i] == "--FromLauncher")
+                {
+                    FromLauncher = true;
                 }
             }
 
@@ -132,6 +138,12 @@ namespace LocalQuest
 
             // add join the discord option
             Options.Add("Join the discord");
+            Options.Add("Give feedback");
+
+            if(FromLauncher)
+            {
+                Options.Add("Go back to the launcher 😶‍🌫️");
+            }
 
             // get user selection
             string Selection = UiTools.WriteControls(Options);
@@ -164,11 +176,24 @@ namespace LocalQuest
                     WhatNew();
                     return;
 
+                case "Go back to the launcher 😶‍🌫️":
+                    break;
+
+                case "Give feedback":
+                    // start process for opening discord
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                    {
+                        FileName = "https://forms.gle/Kz6Z9GbPrg4M6CMt5",
+                        UseShellExecute = true
+                    });
+                    Main(new string[0]);
+                    break;
+
                 case "Join the discord":
                     // start process for opening discord
                     System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
                     { 
-                        FileName = "https://discord.gg/epicquest",
+                        FileName = "https://discord.gg/CnzM6PXYsn",
                         UseShellExecute = true
                     });
                     Main(new string[0]);
@@ -494,6 +519,17 @@ namespace LocalQuest
                 case "Update data":
                     // download avatar items
                     List<AvatarItem> NewItems = AvatarManager.DownloadAvatarItems().Result;
+                    if (AvatarManager.AvatarItems != null && NewItems.Count < AvatarManager.AvatarItems.Count)
+                    {
+                        Console.WriteLine("AAAAAAAAAAAAAAAAAAAAAAHHH");
+                        Thread.Sleep(150);
+                        Console.WriteLine("OWWWWWW");
+                        Thread.Sleep(150);
+                        Console.WriteLine("IT'S SO PAINFULL");
+                        Thread.Sleep(150);
+                        Console.WriteLine("HELPPPPPPPPP");
+                        Thread.Sleep(750);
+                    }
                     // save updated avatar items
                     FileManager.WriteJSON("Avatar/AvatarItems", NewItems);
                     // go back to save settings

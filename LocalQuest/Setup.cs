@@ -12,7 +12,7 @@ namespace LocalQuest
 {
     internal static class Setup
     {
-        public static float Version = .2f;
+        public static float Version = .3f;
         public static bool Beta = true;
         public static void Defaults()
         {
